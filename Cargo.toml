@@ -1,8 +1,24 @@
-[package]
-name = "semantic-exploration"
+[workspace]
+
+members = [
+    "candle-intro",
+    "makemore",
+    "micrograd",
+    "nanogpt",
+]
+
+[workspace.package]
+name = "rusty-nn-zero-to-hero"
 version = "0.1.0"
+authors = ["Kathryn Hite <kghite@gmail.com>"]
 edition = "2021"
+readme = "README.md"
+description = "Shallow Dives course on building neural networks from scratch in Rust, inspired by Karpathy's Zero To Hero course, and enabled by Candle, a minimalist ML framework for Rust developed by HuggingFace."
+repository = "https://github.com/kghite/rusty-nn-zero-to-hero"
+keywords = ["machine-learning"]
+categories = ["science"]
+license = "MIT OR Apache-2.0"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[dependencies]
+[workspace.dependencies]
+candle-core = { git = "https://github.com/huggingface/candle.git", version = "0.3.0" }
+candle-nn = { git = "https://github.com/huggingface/candle.git", version = "0.3.0" }
